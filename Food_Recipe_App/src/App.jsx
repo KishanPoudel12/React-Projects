@@ -14,23 +14,23 @@ import ThemeContextProvider from './Context/OrderContext/ThemeContext'
 function App(){
   return (
     <ThemeContextProvider>
-    <UserContextProvider>
-      <ContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="" element={<Home />} />
-              <Route path="recipes" element={<Recipes />} />
-              <Route path="orders" element={<Orders />} />
-              <Route path="about" element={<AboutUs />} />
-              <Route path="signin" element={<SignIn />} />
-              <Route path="signUp" element={<SignUp />} />
-              <Route path="/recipes/:id" element={<ItemPreview />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </ContextProvider>
-    </UserContextProvider>
+      <UserContextProvider>
+        <ContextProvider>
+          <BrowserRouter basename="/React-Projects/Food_Recipe_App">
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route path="" element={<Home />} />
+                <Route path="recipes" element={<Recipes />} />
+                <Route path="orders" element={<Orders />} />
+                <Route path="about" element={<AboutUs />} />
+                <Route path="signin" element={<SignIn />} />
+                <Route path="signUp" element={<SignUp />} />
+                <Route path="/recipes/:id" element={<ItemPreview />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </ContextProvider>
+      </UserContextProvider>
     </ThemeContextProvider>
   );
 }
